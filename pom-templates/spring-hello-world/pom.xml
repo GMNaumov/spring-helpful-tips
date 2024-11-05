@@ -1,0 +1,46 @@
+<!--Простоейший пример файла pom.xml для проекта на Spring с минимальным количеством зависимостей-->
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.ngm</groupId>
+    <artifactId>spring-hello-world</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
+    <name>spring-hello-world</name>
+    <url>http://maven.apache.org</url>
+
+    <!--Обязательно указываем в блоке properties версию Java, под которую будет собираться проект-->
+    <properties>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <dependencies>
+        <!--Ключевая зависимость. Предоставляет доступ к функциям ядра Spring: IoC, конвейер IoC, обработка исключений-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-core</artifactId>
+            <version>6.1.11</version>
+        </dependency>
+
+        <!--Зависимость, обеспечивающая управление бинами Spring: управление ЖЦ бинов; конфигурирование бинов через аннотации и XML;
+        доступ к интерфейсам BeanFactory и ApplicationContext; автосвязывание (autowiring)-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-beans</artifactId>
+            <version>6.1.11</version>
+        </dependency>
+
+        <!--Зависимость предоставляет доступ к реализации ApplicationContext, поддержке аннотаций @Component, @Service, @Repository
+        и куче других возможностей (интеграции, загрузка ресурсов, i18n, валидирование)-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>6.1.11</version>
+        </dependency>
+    </dependencies>
+</project>
