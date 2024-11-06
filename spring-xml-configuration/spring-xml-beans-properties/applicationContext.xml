@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+                        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!--Пример внедрения зависимости в конструктор класса Car-->
+    <!--Важно! Бинам могут быть только классы, при попытке использования интерфейсов программа упадёт с ошибкой-->
+    <bean id="car" class="com.ngm.projects.Car">
+        <constructor-arg ref="electricEngine" />
+    </bean>
+
+    <!--Пример использования свойств бина в файле конфигурации-->
+    <!--Для свойства в классе бина обязательно должны быть созданы геттеры и сеттеры!-->
+    <bean id="electricEngine" class="com.ngm.projects.ElectricEngine">
+        <property name="power" value="40" />
+    </bean>
+</beans>
