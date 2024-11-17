@@ -1,0 +1,2 @@
+=> Spring Boot application run (for maven)
+mvn spring-boot:run

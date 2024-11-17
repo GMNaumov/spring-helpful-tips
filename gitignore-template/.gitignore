@@ -1,0 +1,32 @@
+### Build Artifacts ###
+target/
+build/
+bin/
+.gradle/
+
+### IDE Settings and Files ###
+.idea/
+.vscode/
+.setting/
+.classpath
+.project
+
+*.iml
+*.ipr
+*.iws
+*.idea
+
+### Binary Files and Other Trash ###
+*.class
+*.log
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+### OS Files ###
+*.DS_Store
+Thumbs.db
